@@ -1,0 +1,4 @@
+baseURL = 'https://agsystems.lv/'
+languageCode = 'en-us'
+title = 'AG Systems - Autogāze'
+theme = "ananke"
