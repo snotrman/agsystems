@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://agsystems.lv/</loc>
+    <lastmod>2025-10-04T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://agsystems.lv/posts/</loc>
+    <lastmod>2025-10-04T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://agsystems.lv/posts/my-first-post/</loc>
+    <lastmod>2022-10-11T12:32:31+00:00</lastmod>
+  </url><url>
+    <loc>https://agsystems.lv/categories/</loc>
+  </url><url>
+    <loc>https://agsystems.lv/tags/</loc>
+  </url>
+</urlset>
