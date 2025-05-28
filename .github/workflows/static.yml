@@ -13,6 +13,12 @@ jobs:
     steps:
       - name: Debug Environment Variables
         run: env | grep TINA
+      - name: Debug public id
+        run: echo "TINA_PUBLIC_CLIENT_ID=${{ secrets.TINA_PUBLIC_CLIENT_ID }}"
+      - name: Debug id
+        run: echo "TINA_CLIENT_ID=${{ secrets.TINA_CLIENT_ID }}"
+      - name: Debug Secrets
+        run: echo "TINA_TOKEN=${{ secrets.TINA_TOKEN }}"
       # - name: Checkout repository
       #   uses: actions/checkout@v3
 
