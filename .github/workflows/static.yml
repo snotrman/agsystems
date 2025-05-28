@@ -7,27 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: github-pages
-    env:
-      TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
-      TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-      TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
     steps:
-      - name: Debug Environment Secrets
-        run: env | grep TINA
-      - name: Debug public id secret
-        run: echo "TINA_PUBLIC_CLIENT_ID=${{ secrets.TINA_PUBLIC_CLIENT_ID }}"
-      - name: Debug id secret
-        run: echo "TINA_CLIENT_ID=${{ secrets.TINA_CLIENT_ID }}"
-      - name: Debug Token secret
-        run: echo "TINA_TOKEN=${{ secrets.TINA_TOKEN }}"
-      - name: Debug Environment Variables
-        run: env | grep TINA
-      - name: Debug public id variable
-        run: echo "TINA_PUBLIC_CLIENT_ID=${{ vars.TINA_PUBLIC_CLIENT_ID }}"
-      - name: Debug id variable
-        run: echo "TINA_CLIENT_ID=${{ vars.TINA_CLIENT_ID }}"
-      - name: Debug token variable
-        run: echo "TINA_TOKEN=${{ vars.TINA_TOKEN }}"
 
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -43,6 +23,7 @@ jobs:
           TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
           TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+          TINA_BRANCH: ${{ vars.TINA_BRANCH}}
         run: npx tinacms build
 
       - name: Build Hugo Site
