@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: github-pages
     env:
       TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
       TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
@@ -27,27 +28,29 @@ jobs:
         run: echo "TINA_CLIENT_ID=${{ vars.TINA_CLIENT_ID }}"
       - name: Debug token variable
         run: echo "TINA_TOKEN=${{ vars.TINA_TOKEN }}"
-      # - name: Checkout repository
-      #   uses: actions/checkout@v3
 
-      # - name: Install Hugo
-      #   run: sudo apt-get install hugo
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      # - name: Install Dependencies
-      #   run: npm ci
+      - name: Install Hugo
+        run: sudo apt-get install hugo
 
-      # - name: Build TinaCMS
-      #   env:
-      #     TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-      #     TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-      #   run: npx tinacms build
+      - name: Install Dependencies
+        run: npm ci
 
-      # - name: Build Hugo Site
-      #   run: hugo
+      - name: Build TinaCMS
+        env:
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+        run: npx tinacms build
 
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_branch: gh-pages
-      #     publish_dir: ./public
+      - name: Build Hugo Site
+        run: hugo
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
