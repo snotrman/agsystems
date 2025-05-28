@@ -18,23 +18,23 @@ jobs:
       - name: Check hugo version
         run: hugo version
 
-      # - name: Install Dependencies
-      #   run: npm ci
+      - name: Install Dependencies
+        run: npm ci
 
-      # - name: Build TinaCMS
-      #   env:
-      #     TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-      #     TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
-      #     TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-      #     TINA_BRANCH: ${{ vars.TINA_BRANCH}}
-      #   run: npx tinacms build
+      - name: Build TinaCMS
+        env:
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+          TINA_BRANCH: ${{ vars.TINA_BRANCH}}
+        run: npx tinacms build
 
-      # - name: Build Hugo Site
-      #   run: hugo
+      - name: Build Hugo Site
+        run: hugo
 
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_branch: gh-pages
-      #     publish_dir: ./public
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
