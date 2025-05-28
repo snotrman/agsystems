@@ -1,5 +1,6 @@
 import { defineConfig } from "tinacms";
 import Post from "./collections/post";
+import Doc from "./collections/doc";
 
 export default defineConfig({
   clientId: process.env.TINA_CLIENT_ID!,
@@ -15,10 +16,13 @@ export default defineConfig({
   media: {
     tina: {
       mediaRoot: "uploads",
-      publicFolder: "static",
+      publicFolder: "/",
     },
   },
   schema: {
-    collections: [Post],
+    collections: [
+      Post,
+      Doc,
+    ],
   },
 });
