@@ -39,6 +39,8 @@ jobs:
       TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
       TINA_BRANCH: ${{ vars.TINA_BRANCH}}
     steps:
+      - name: See if environtment variables are loaded
+        run: echo "HUGO_VERSION: 0.147.7 CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }} TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }} TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }} NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }} TINA_TOKEN: ${{ secrets.TINA_TOKEN }} TINA_BRANCH: ${{ vars.TINA_BRANCH }}"
       - name: Checkout
         uses: actions/checkout@v4
         with:
