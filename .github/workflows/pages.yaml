@@ -43,6 +43,11 @@ jobs:
         run: echo "CLIENT_ID ${{ secrets.TINA_CLIENT_ID }} TINA_CLIENT_ID ${{ secrets.TINA_CLIENT_ID }} TINA_PUBLIC_CLIENT_ID ${{ secrets.TINA_CLIENT_ID }} NEXT_PUBLIC_TINA_CLIENT_ID ${{ secrets.TINA_CLIENT_ID }} TINA_TOKEN ${{ secrets.TINA_TOKEN }} TINA_BRANCH ${{ vars.TINA_BRANCH }}"
       - name: See if environtment variables are loaded another way
         run: echo $CLIENT_ID $TINA_CLIENT_ID $TINA_PUBLIC_CLIENT_ID $TINA_TOKEN $NEXT_PUBLIC_TINA_CLIENT_ID $TINA_BRANCH
+      - name: Debug Secrets
+        env:
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+        run: echo "TINA_CLIENT_ID=$TINA_CLIENT_ID TINA_TOKEN=$TINA_TOKEN"
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -68,6 +73,9 @@ jobs:
           HUGO_ENV: production
         run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}"
       - name: Install tina
+        env:
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: npm ci
       - name: Build tina
         run: npm run tinacms build
