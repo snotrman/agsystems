@@ -48,7 +48,7 @@ jobs:
           TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: echo "TINA_CLIENT_ID=$TINA_CLIENT_ID TINA_TOKEN=$TINA_TOKEN"
-      - name: Checkout
+      - name: Checkout 
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # fetch all history for .GitInfo and .Lastmod
