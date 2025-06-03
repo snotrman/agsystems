@@ -32,22 +32,40 @@ export default defineConfig({
         name: "post",
         label: "Posts",
         path: "content/posts",
+        match: {
+          exclude: "_index.md", // Ensures `_index.md` is not included
+        },
         fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
+          { type: "string", name: "title", label: "Title", isTitle: true, required: true },
+          { type: "rich-text", name: "body", label: "Body", isBody: true, parser: { type: "markdown", skipEscaping: "all" } },
+        ],
+      },
+      {
+        name: "page",
+        label: "Pages",
+        path: "content",
+        match: {
+          include: "*", // Ensures only markdown files at root level
+          exclude: "/**/**", // Prevents conflicts with posts and docs
+        },
+        fields: [
+          { type: "string", name: "title", label: "Title", isTitle: true, required: true },
+          { type: "rich-text", name: "body", label: "Body", isBody: true, parser: { type: "markdown", skipEscaping: "all" } },
+        ],
+      },
+      {
+        name: "docs",
+        label: "Docs",
+        path: "content/docs",
+        match: {
+          exclude: "_index.md", // Ensures docs/_index.md isn't mistakenly included
+        },
+        fields: [
+          { type: "string", name: "title", label: "Title", isTitle: true, required: true },
+          { type: "rich-text", name: "body", label: "Body", isBody: true, parser: { type: "markdown", skipEscaping: "all" } },
         ],
       },
     ],
-  },
+  }
+
 });

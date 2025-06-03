@@ -18,10 +18,8 @@
     "url": "https://github.com/snotrman/agsystems/issues"
   },
   "homepage": "https://github.com/snotrman/agsystems#readme",
-  "dependencies": {
-    "@tinacms/cli": "^1.9.8"
-  },
   "devDependencies": {
+    "@tinacms/cli": "^1.9.8",
     "@types/node": "^22.15.29"
   }
 }

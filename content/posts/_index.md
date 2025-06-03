@@ -9,10 +9,18 @@ This is the landing page.
 
 ## Explore
 
-{{\< cards >}}
-{{\< card link="docs" title="Docs" icon="book-open" >}}
-{{\< card link="about" title="About" icon="user" >}}
-{{\< /cards >}}
+thehehuiweafhoiauwhefoiawhuefoiuahweoifuhaweofiuah weoifuhaweoirfu hawoierfuhaoi fuhaoi fhuaowi eufhoai hufoai hfoiawu hfoiauh foiawu hfoiau hfoiawu hfoiawu hfoiauh foaiw uhfoiaw eufhoiaw ufhoawi uefoiawuh foiawuh foiaw uhfoiaw ufoiaw uhfoiaw uhfoiaw hfoiaw hfoiawu hfoiaw foiaw hoif ahwoiuhawoiefuhawoieufh aowieufh oaiwuhf oaiwuehf aowieufh oaiwuehf
+jihugytfr
+
+{{< cards >}} cards
+content="This is a card"
+{{< /cards >}}
+
+{{< cards >}}
+{{< card link="docs" title="Docs" icon="book-open" >}}
+{{< card link="about" title="About" icon="user" >}}
+{{< /cards >}}
+
 awfafeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 liuygkuyg
 testing
@@ -24,7 +32,7 @@ testing
 [aweffa](https://google.com/)
 
 > WEFAWEF\
-> \\
+> \
 
 * AWEFAWEF
 * AWEFAWEF

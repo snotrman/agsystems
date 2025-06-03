@@ -1,18 +1,18 @@
 ---
-title: My Site
+title: Autogāzes uzstādīšana
 toc: false
 ---
 
-This is the landing page.afawef
+Šī ir pirmā lapa
 
 ## Explore
 
 {{< cards >}}
-  {{< card link="docs" title="Docs" icon="book-open" >}}
-  {{< card link="about" title="About" icon="user" >}}
+  {{< card link="docs" title="Dokumenti" icon="book-open" >}}
+  {{< card link="about" title="Par mums" icon="user" >}}
 {{< /cards >}}
 awefawefawef
 
 ## Documentation
 
-For more information, visit [Hextra](https://imfing.github.io/hextra).
+Vairāk informācijas var atrast: [Hextra](https://imfing.github.io/hextra).
