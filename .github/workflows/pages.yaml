@@ -73,11 +73,16 @@ jobs:
           HUGO_ENV: production
         run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}"
       - name: Install tina
-        env:
-          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: npm ci
       - name: Build tina
+        env:
+          HUGO_VERSION: 0.147.7
+          CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+          TINA_BRANCH: ${{ vars.TINA_BRANCH}}
         run: npm run tinacms build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
