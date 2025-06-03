@@ -60,7 +60,7 @@ jobs:
       - name: Install tina
         run: npm ci
       - name: Build tina
-        run: tinacms build
+        run: npm run tinacms build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
