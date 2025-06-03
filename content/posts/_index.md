@@ -17,7 +17,7 @@ awfafeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 liuygkuyg
 testing
 
-![](//uploads/486526361_2582046821999952_5522183479634467504_n.jpg)
+![](/uploads/486526361_2582046821999952_5522183479634467504_n.jpg)
 
 [aweffa](https://google.com/)
 
