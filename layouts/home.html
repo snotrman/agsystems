@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <div class="hx:relative hx:w-full hx:h-[60vh] ">
+    
+    <!-- Overlay Title -->
+    {{ if .Title }}
+    <h1 class="hx:text-center hx:text-4xl hx:font-bold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100 hx:absolute hx:w-full hx:text-center hx:top-1/2 hx:left-1/2 hx:-translate-x-1/2 hx:-translate-y-1/2 hx:text-5xl hx:font-bold hx:text-white hx:tracking-wide">
+      {{ .Title }}
+    </h1>
+    {{ end }}
+
+    <!-- Hero Image -->
+    <img src="/uploads/487558643_2588338761370758_1681785484355770084_n.jpg" 
+         alt="AGSystems Facility" 
+         style="opacity: 0.3;" 
+         class="hx:w-full hx:h-full hx:object-cover">
+
+  </div>
+
+  <!-- Main Content -->
+  <div class="hx:mx-auto hx:flex hextra-max-page-width">
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
+    {{ partial "toc.html" . }}
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main class="hx:w-full hx:min-w-0 hx:max-w-6xl hx:px-6 hx:pt-4 hx:md:px-12">
+        <div class="content">
+          {{ .Content }}
+        </div>
+      </main>
+    </article>
+  </div>
+{{ end }}

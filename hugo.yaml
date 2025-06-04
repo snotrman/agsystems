@@ -82,8 +82,8 @@ params:
 
   theme:
     # light | dark | system
-    default: light
-    displayToggle: false
+    default: dark
+    displayToggle: true
     
   footer:
     displayCopyright: true
