@@ -41,8 +41,44 @@ export default defineConfig({
         ],
       },
       {
-        name: "page",
-        label: "Pages",
+        name: "offers",
+        label: "Offers",
+        path: "content/offers",
+        // match: {
+        //   exclude: "_index.md", // Ensures `_index.md` is not included
+        // },
+        fields: [
+          { type: "string", name: "title", label: "Title", isTitle: true, required: true },
+          { type: "rich-text", name: "body", label: "Body", isBody: true, parser: { type: "markdown", skipEscaping: "all" } },
+        ],
+      },
+      {
+        name: "about",
+        label: "About",
+        path: "content/about",
+        // match: {
+        //   exclude: "_index.md", // Ensures `_index.md` is not included
+        // },
+        fields: [
+          { type: "string", name: "title", label: "Title", isTitle: true, required: true },
+          { type: "rich-text", name: "body", label: "Body", isBody: true, parser: { type: "markdown", skipEscaping: "all" } },
+        ],
+      },
+      {
+        name: "contact",
+        label: "Contact",
+        path: "content/contact",
+        // match: {
+        //   exclude: "_index.md", // Ensures `_index.md` is not included
+        // },
+        fields: [
+          { type: "string", name: "title", label: "Title", isTitle: true, required: true },
+          { type: "rich-text", name: "body", label: "Body", isBody: true, parser: { type: "markdown", skipEscaping: "all" } },
+        ],
+      },
+      {
+        name: "home",
+        label: "Home",
         path: "content",
         match: {
           include: "*", // Ensures only markdown files at root level

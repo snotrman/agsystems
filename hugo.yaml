@@ -29,37 +29,41 @@ languages:
 
 menu:
   main:
-    - identifier: documentation
-      name: Docs
-      pageRef: /docs
-      weight: 1
+    # - identifier: documentation
+    #   name: Docs
+    #   pageRef: /docs
+    #   weight: 1
     - identifier: about
       name: About
       pageRef: /about
       weight: 2
-    - identifier: posts
-      name: Posts
-      pageRef: /posts
+    - identifier: offers
+      name: Offers
+      pageRef: /offers
       weight: 1
+    # - identifier: posts
+    #   name: Posts
+    #   pageRef: /posts
+    #   weight: 1
     - identifier: contact
-      name: Contact ↗
-      url: "https://github.com/imfing"
+      name: Contact
+      pageRef: /contact
       weight: 3
     - identifier: search
       name: Search
       weight: 4
       params:
         type: search
-    - name: GitHub
+    - name: Facebook
       weight: 5
-      url: "https://github.com/imfing/hextra-starter-template"
+      url: "https://www.facebook.com/p/AG-systems-100054471579837/"
       params:
-        icon: github
-    - name: Twitter
-      weight: 6
-      url: "https://twitter.com/"
-      params:
-        icon: x-twitter
+        icon: facebook
+    # - name: Twitter
+    #   weight: 6
+    #   url: "https://twitter.com/"
+    #   params:
+    #     icon: x-twitter
 
 params:
   description: AG Systems - Autogāze
@@ -82,7 +86,7 @@ params:
 
   theme:
     # light | dark | system
-    default: dark
+    default: system
     displayToggle: true
     
   footer:

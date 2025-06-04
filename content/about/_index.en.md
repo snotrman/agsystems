@@ -4,8 +4,6 @@ toc: false
 title: About
 ---
 
-## AGSystems History
-
 {{< callout type="info" title="Company History" >}}
 **Founded in 1997**, AGSystems is **Latvia’s leading LPG installer**.
 {{< /callout >}}

@@ -4,8 +4,6 @@ toc: false
 title: О нас
 ---
 
-## История AGSystems
-
 {{< callout type="info" title="История компании" >}}
 **Основана в 1997 году**, AGSystems – **ведущий установщик автогаза (LPG) в Латвии**.
 {{< /callout >}}

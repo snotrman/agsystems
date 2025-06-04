@@ -4,8 +4,6 @@ toc: false
 title: Par Mums
 ---
 
-## AGSystems Vēsture
-
 {{< callout type="info" title="Uzņēmuma vēsture" >}}
 **Dibināts 1997. gadā**, AGSystems ir **Latvijas vadošais autogāzes uzstādītājs**.
 {{< /callout >}}
